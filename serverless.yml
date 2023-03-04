@@ -1,0 +1,24 @@
+service: edge-locations-serverless-api
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  httpApi:
+    cors: true
+  environment:
+    DATABASE_URL: ${file(.env.json):DATABASE_URL}
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi:
+          path: /
+          method: get
+  read:
+    handler: read.handler
+    events:
+      - httpApi:
+          path: /read
+          method: get

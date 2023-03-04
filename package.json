@@ -1,0 +1,17 @@
+{
+  "name": "edge-locations-serverless-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "serverless deploy && serverless deploy --region us-west-2 && serverless deploy --region eu-central-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cloud-regions-country-flags": "^1.1.1",
+    "pg": "^8.9.0"
+  }
+}

@@ -13,11 +13,15 @@ module.exports.handler = async (event) => {
   const client = await pool.connect();
 
   try {
-    const data = await client.query('SELECT * from locations');
+    const response = await client.query('SELECT * from locations');
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: 'Read - A Ok!', region: process.env.AWS_REGION, data: data }, null, 2),
+      body: JSON.stringify(
+        { message: 'Read - A Ok!', region: process.env.AWS_REGION, locations: response.rows || [] },
+        null,
+        2
+      ),
     };
   } catch (error) {
     return {

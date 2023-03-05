@@ -18,7 +18,13 @@ module.exports.handler = async (event) => {
     return {
       statusCode: 200,
       body: JSON.stringify(
-        { message: 'Read - A Ok!', region: process.env.AWS_REGION, locations: response.rows || [] },
+        {
+          message: 'Read - A Ok!',
+          region: process.env.AWS_REGION,
+          data: {
+            locations: response.rows || [],
+          },
+        },
         null,
         2
       ),

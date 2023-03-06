@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "cloud-regions-country-flags": "^1.1.1",
+    "fast-geoip": "^1.1.88",
     "pg": "^8.9.0"
   }
 }

@@ -15,10 +15,16 @@ functions:
     events:
       - httpApi:
           path: /
-          method: get
+          method: GET
   read:
     handler: read.handler
     events:
       - httpApi:
           path: /read
-          method: get
+          method: GET
+  create:
+    handler: create.handler
+    events:
+      - httpApi:
+          path: /create
+          method: POST

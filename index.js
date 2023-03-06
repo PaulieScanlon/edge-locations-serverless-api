@@ -8,6 +8,8 @@ module.exports.handler = async (event, context) => {
         message: 'Index - A Ok!',
         region: process.env.AWS_REGION,
         provider: fromProvider(process.env.AWS_REGION, 'AWS'),
+        event: event,
+        context: context,
       },
       null,
       2

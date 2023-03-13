@@ -1,17 +1,9 @@
-const { Pool } = require('pg');
+const { getDB } = require('./pg');
 const geoip = require('fast-geoip');
 
-let pool;
-
 module.exports.handler = async (event) => {
-  if (!pool) {
-    const connectionString = process.env.DATABASE_URL;
-    pool = new Pool({
-      connectionString,
-      max: 1,
-    });
-  }
-  const client = await pool.connect();
+  const client = await getDB().connect();
+
   const { date } = JSON.parse(event.body);
 
   try {

@@ -16,13 +16,22 @@ Additional routes may be added for the following:
 
 ### Deployment
 
+Deploy all three regions is one hit
+
+```
+npm run deploy
+
+```
+
+### Deployment (serverless)
+
 The default region is `us-east-1`. Using the below deploys to the default region.
 
 ```shell
 serverless deploy
 ```
 
-#### Deployment (regions)
+#### Deployment (serverless - regions)
 
 To deploy to additional regions use the below.
 

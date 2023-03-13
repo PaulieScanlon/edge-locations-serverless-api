@@ -28,3 +28,9 @@ functions:
       - httpApi:
           path: /create
           method: POST
+  delete:
+    handler: delete.handler
+    events:
+      - httpApi:
+          path: /delete
+          method: DELETE

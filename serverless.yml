@@ -17,6 +17,12 @@ functions:
       - httpApi:
           path: /
           method: GET
+  test:
+    handler: test.handler
+    events:
+      - httpApi:
+          path: /test
+          method: GET
   read:
     handler: read.handler
     events:

@@ -18,4 +18,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           npm install
-          npm run deploy:quick
+          npm run deploy

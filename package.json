@@ -20,7 +20,6 @@
     "pg": "^8.9.0"
   },
   "devDependencies": {
-    "beautify-json": "^1.0.1",
     "serverless": "^3.28.1"
   }
 }

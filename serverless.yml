@@ -1,3 +1,4 @@
+useDotenv: true
 service: edge-locations-serverless-api
 frameworkVersion: '3'
 
@@ -7,7 +8,7 @@ provider:
   httpApi:
     cors: true
   environment:
-    DATABASE_URL: ${file(.env.json):DATABASE_URL}
+    DATABASE_URL: ${env:DATABASE_URL}
 
 functions:
   api:

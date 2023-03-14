@@ -1,3 +1,4 @@
+const { beautify } = require('beautify-json');
 const { getDB } = require('./pg');
 
 module.exports.handler = async () => {
@@ -13,7 +14,7 @@ module.exports.handler = async () => {
           message: 'Read - A Ok!',
           region: process.env.AWS_REGION,
           data: {
-            locations: response.rows || [],
+            locations: beautify(response.rows) || [],
           },
         },
         null,

@@ -6,17 +6,12 @@ This framework can be used to deploy AWS Lambdas for use with AWS API Gateway. B
 
 This example has been deployed behind a Route 53 registered domain:
 
-- 🚀 [https://api.crl-devrel.net/](https://api.crl-devrel.net/)
-
-Additional routes may be added for the following:
-
-- /create
-- /read
-- /delete
+- 🚀 API [https://api.crl-devrel.net/](https://api.crl-devrel.net/)
+- 🚀 APP [https://cockroachdb-edge-locations.vercel.app/](https://cockroachdb-edge-locations.vercel.app/)
 
 ### Deployment
 
-Deploy all three regions is one hit
+Deploy all three regions in one hit
 
 ```
 npm run deploy

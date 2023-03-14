@@ -2,23 +2,24 @@
 
 ## Usage
 
-This framework can be used to deploy AWS Lambdas for use with AWS API Gateway. Built with: [Serverless Framework](https://www.serverless.com/framework/docs) and the [Serverless CLI](https://www.serverless.com/framework/docs/getting-started).
-
-This example has been deployed behind a Route 53 registered domain:
+This repo is for multi-region AWS Lambda Functions used in the [Edge](https://cockroachdb-edge-locations.vercel.app/) app.
 
 - 🚀 API [https://api.crl-devrel.net/](https://api.crl-devrel.net/)
 - 🚀 APP [https://cockroachdb-edge-locations.vercel.app/](https://cockroachdb-edge-locations.vercel.app/)
 
-### Deployment
+### Deployment (Prod)
+
+Deployment for three regions is handled when a push or merge occurs on the `main` branch. This is handled by the a GitHub Action: `./.github/workflows/build-me.yaml`
+
+### Deployment (Dev)
 
 Deploy all three regions in one hit
 
 ```
 npm run deploy
-
 ```
 
-### Deployment (serverless)
+#### Deployment (Local | serverless)
 
 The default region is `us-east-1`. Using the below deploys to the default region.
 
@@ -26,7 +27,7 @@ The default region is `us-east-1`. Using the below deploys to the default region
 serverless deploy
 ```
 
-#### Deployment (serverless - regions)
+#### Deployment (Local | serverless - regions)
 
 To deploy to additional regions use the below.
 
@@ -39,3 +40,8 @@ serverless deploy --region us-west-1
 ## Infrastructure
 
 Each Lambda is deployed to a region. The region also requires a custom domain and ACM certificate mapping. Each API can then be used by Route 53 which routes traffic by geographical A records in Hosted Zones.
+
+## Tech
+
+- [Serverless Framework](https://www.serverless.com/framework/docs)
+- [Serverless CLI](https://www.serverless.com/framework/docs/getting-started).

@@ -1,7 +1,7 @@
 {
   "name": "edge-locations-serverless-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Serverless Framework AWS Multi-Region Lambda",
   "main": "index.js",
   "scripts": {
     "us-east-1": "serverless deploy --region us-east-1",

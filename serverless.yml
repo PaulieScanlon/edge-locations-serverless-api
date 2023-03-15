@@ -35,27 +35,3 @@ functions:
       - httpApi:
           path: /delete
           method: DELETE
-  v1api:
-    handler: index.handler
-    events:
-      - httpApi:
-          path: /v1
-          method: GET
-  v1read:
-    handler: read.handler
-    events:
-      - httpApi:
-          path: /v1/read
-          method: GET
-  v1create:
-    handler: create.handler
-    events:
-      - httpApi:
-          path: /v1/create
-          method: POST
-  v1delete:
-    handler: delete.handler
-    events:
-      - httpApi:
-          path: /v1/delete
-          method: DELETE

@@ -17,7 +17,6 @@ functions:
       - httpApi:
           path: /
           method: GET
-
   read:
     handler: read.handler
     events:
@@ -36,7 +35,12 @@ functions:
       - httpApi:
           path: /delete
           method: DELETE
-
+  v1api:
+    handler: index.handler
+    events:
+      - httpApi:
+          path: /v1
+          method: GET
   v1read:
     handler: read.handler
     events:

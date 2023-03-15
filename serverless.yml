@@ -17,27 +17,22 @@ functions:
       - httpApi:
           path: /
           method: GET
-  test:
-    handler: test.handler
-    events:
-      - httpApi:
-          path: /test
-          method: GET
+
   read:
     handler: read.handler
     events:
       - httpApi:
-          path: /read
+          path: /v1/read
           method: GET
   create:
     handler: create.handler
     events:
       - httpApi:
-          path: /create
+          path: /v1/create
           method: POST
   delete:
     handler: delete.handler
     events:
       - httpApi:
-          path: /delete
+          path: /v1/delete
           method: DELETE

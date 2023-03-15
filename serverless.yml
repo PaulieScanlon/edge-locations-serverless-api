@@ -12,25 +12,25 @@ provider:
 
 functions:
   api:
-    handler: index.handler
+    handler: v1/index.handler
     events:
       - httpApi:
           path: /
           method: GET
   read:
-    handler: read.handler
+    handler: v1/read.handler
     events:
       - httpApi:
           path: /read
           method: GET
   create:
-    handler: create.handler
+    handler: v1/create.handler
     events:
       - httpApi:
           path: /create
           method: POST
   delete:
-    handler: delete.handler
+    handler: v1/delete.handler
     events:
       - httpApi:
           path: /delete

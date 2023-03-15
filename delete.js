@@ -12,7 +12,7 @@ module.exports.handler = async (event) => {
       statusCode: 200,
       body: JSON.stringify(
         {
-          message: 'Delete v1 - A Ok!',
+          message: 'Delete - A Ok!',
           data: {
             id: id,
           },

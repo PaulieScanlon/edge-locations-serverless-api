@@ -25,7 +25,7 @@ module.exports.handler = async (event) => {
       statusCode: 200,
       body: JSON.stringify(
         {
-          message: 'Create v1 - A Ok!',
+          message: 'Create - A Ok!',
           data: {
             region: process.env.AWS_REGION,
             id: response.rows[0].id,

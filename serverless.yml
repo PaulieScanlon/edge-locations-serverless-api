@@ -22,15 +22,34 @@ functions:
     handler: read.handler
     events:
       - httpApi:
-          path: /v1/read
+          path: /read
           method: GET
   create:
     handler: create.handler
     events:
       - httpApi:
-          path: /v1/create
+          path: /create
           method: POST
   delete:
+    handler: delete.handler
+    events:
+      - httpApi:
+          path: /delete
+          method: DELETE
+
+  v1read:
+    handler: read.handler
+    events:
+      - httpApi:
+          path: /v1/read
+          method: GET
+  v1create:
+    handler: create.handler
+    events:
+      - httpApi:
+          path: /v1/create
+          method: POST
+  v1delete:
     handler: delete.handler
     events:
       - httpApi:
